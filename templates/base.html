@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>License Plate Detection & Recognition</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS -->
+    <link href="static/css/style.css" rel="stylesheet">
+
+
+    <style type="text/css">
+
+      body {
+        font: 400 1em/1.5 "Neuton";
+        background: #3d7505;
+        color: rgba(255, 255, 255, 0.25);
+        text-align: center;
+        margin: 0;
+      }
+      
+      h1 {
+        font: 700 4em/1 "Oswald", sans-serif;
+        letter-spacing: 0;
+        padding: .25em 0 .325em;
+        display: block;
+        margin: 0 auto;
+        text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+        background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+        /* Clip Background Image */
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Animate Background Image */
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: aitf 80s linear infinite;
+        /* Activate hardware acceleration for smoother animations */
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+      }
+    
+      
+      
+      /* Animate Background Image */
+      @-webkit-keyframes aitf {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-center">
+    
+    
+    <div class="container" style="margin: auto; text-align: center; margin-top: 70px;  text-transform: uppercase">
+      <h1>License Plate Detection & Recognition </h1>
+      <img class="mb-4" src="https://www.kurokesu.com/main/wp-content/uploads/2016/08/out2-1.gif" alt="" />
+      <form action="/upload" method="post" enctype="multipart/form-data" style="margin-top: 50px; text-align: center; margin: auto;" onsubmit="showloading()">
+        <span class="text-left btn btn-default btn-file">
+            <img id="blah" src="#" alt="" style="display: none;">
+            <input type="file" name="image" onchange=readURL(this)>
+        </span>
+        <div>
+          <img id="loading_image" style="display: none" 
+          src="{{ url_for('static', filename='img/loading_.gif')}}">
+      </div>
+    
+        <span class="text-right">
+          <input type="submit" value="Detect" class="btn btn-primary">
+        </span>
+      </form>
+           
+      <p class="mt-5 mb-3 text-muted">&copy; Mariana 2020</p>
+    </div>
+    <script src="static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/img.js"></script>
+
+  </body>
+</html>
