@@ -1,7 +1,5 @@
-# license-plate-detection-
 
 # LICENSE PLATE DETECTION AND RECOGNITION
-![image alt](https://www.kurokesu.com/main/wp-content/uploads/2016/08/out2-1.gif)
 
 ## What about the project?
 * Detect stolen vehicles and support to search them.
